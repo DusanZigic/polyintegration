@@ -55,7 +55,7 @@ static void polynomialCoeff(const std::vector<double> &dataX, const std::vector<
 	}
 }
 
-double linearIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata)
+double poly::linearIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata)
 {
 	if (xdata.size() < 2) return 0.0;
 
@@ -74,7 +74,7 @@ double linearIntegrate(const std::vector<double> &xdata, const std::vector<doubl
 	return res;
 }
 
-double linearIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit)
+double poly::linearIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit)
 {
 	if (xdata.size() < 2) return 0.0;
 
@@ -119,7 +119,7 @@ double linearIntegrate(const std::vector<double> &xdata, const std::vector<doubl
 	return (sum - highSum - lowSum);
 }
 
-double cubicIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata)
+double poly::cubicIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata)
 {
 	if (xdata.size() < 2) return 0;
 
@@ -142,7 +142,7 @@ double cubicIntegrate(const std::vector<double> &xdata, const std::vector<double
 	return sum;
 }
 
-double cubicIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit)
+double poly::cubicIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit)
 {
 	if (xdata.size() < 2) return 0;
 
