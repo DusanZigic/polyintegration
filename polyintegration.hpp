@@ -4,10 +4,17 @@
 #include <vector>
 
 namespace poly {
-    double linearIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata);
-    double linearIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit);
-    double cubicIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata);
-    double cubicIntegrate(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit);
+    template <typename T>
+    double linearIntegrate(const std::vector<T> &xdata, const std::vector<T> &fdata);
+    
+    template <typename T>
+    double linearIntegrate(const std::vector<T> &xdata, const std::vector<T> &fdata, T lowLimit, T highLimit);
+    
+    template <typename T>
+    double cubicIntegrate(const std::vector<T> &xdata, const std::vector<T> &fdata);
+    
+    template <typename T>
+    double cubicIntegrate(const std::vector<T> &xdata, const std::vector<T> &fdata, T lowLimit, T highLimit);
 }
 
 #endif
