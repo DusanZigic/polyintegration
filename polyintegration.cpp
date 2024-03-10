@@ -76,8 +76,6 @@ double poly::linearIntegrate(const std::vector<T> &xdata, const std::vector<T> &
 
 	return res;
 }
-template double poly::linearIntegrate<int>(const std::vector<int> &xdata, const std::vector<int> &fdata);
-template double poly::linearIntegrate<long int>(const std::vector<long int> &xdata, const std::vector<long int> &fdata);
 template double poly::linearIntegrate<float>(const std::vector<float> &xdata, const std::vector<float> &fdata);
 template double poly::linearIntegrate<double>(const std::vector<double> &xdata, const std::vector<double> &fdata);
 template double poly::linearIntegrate<long double>(const std::vector<long double> &xdata, const std::vector<long double> &fdata);
@@ -132,8 +130,6 @@ double poly::linearIntegrate(const std::vector<T> &xdata, const std::vector<T> &
 	//integral value is full-low-high
 	return (sum - highSum - lowSum);
 }
-template double poly::linearIntegrate<int>(const std::vector<int> &xdata, const std::vector<int> &fdata, int lowLimit, int highLimit);
-template double poly::linearIntegrate<long int>(const std::vector<long int> &xdata, const std::vector<long int> &fdata, long int lowLimit, long int highLimit);
 template double poly::linearIntegrate<float>(const std::vector<float> &xdata, const std::vector<float> &fdata, float lowLimit, float highLimit);
 template double poly::linearIntegrate<double>(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit);
 template double poly::linearIntegrate<long double>(const std::vector<long double> &xdata, const std::vector<long double> &fdata, long double lowLimit, long double highLimit);
@@ -161,8 +157,6 @@ double poly::cubicIntegrate(const std::vector<T> &xdata, const std::vector<T> &f
 
 	return sum;
 }
-template double poly::cubicIntegrate<int>(const std::vector<int> &xdata, const std::vector<int> &fdata);
-template double poly::cubicIntegrate<long int>(const std::vector<long int> &xdata, const std::vector<long int> &fdata);
 template double poly::cubicIntegrate<float>(const std::vector<float> &xdata, const std::vector<float> &fdata);
 template double poly::cubicIntegrate<double>(const std::vector<double> &xdata, const std::vector<double> &fdata);
 template double poly::cubicIntegrate<long double>(const std::vector<long double> &xdata, const std::vector<long double> &fdata);
@@ -224,8 +218,6 @@ double poly::cubicIntegrate(const std::vector<T> &xdata, const std::vector<T> &f
 	//integral value is full-low-high
 	return (sum - highSum - lowSum);
 }
-template double poly::cubicIntegrate<int>(const std::vector<int> &xdata, const std::vector<int> &fdata, int lowLimit, int highLimit);
-template double poly::cubicIntegrate<long int>(const std::vector<long int> &xdata, const std::vector<long int> &fdata, long int lowLimit, long int highLimit);
 template double poly::cubicIntegrate<float>(const std::vector<float> &xdata, const std::vector<float> &fdata, float lowLimit, float highLimit);
 template double poly::cubicIntegrate<double>(const std::vector<double> &xdata, const std::vector<double> &fdata, double lowLimit, double highLimit);
 template double poly::cubicIntegrate<long double>(const std::vector<long double> &xdata, const std::vector<long double> &fdata, long double lowLimit, long double highLimit);
